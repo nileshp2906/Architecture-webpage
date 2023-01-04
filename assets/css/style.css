@@ -1,0 +1,1265 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h3, h4, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Global styling start here */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  font-family:'Futura Bold', sans-serif;
+}
+
+ul,li {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Poppins', sans-serif;}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h2 {
+  color: #fff;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+h3 {
+  color: #252525;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+h4 {
+  color: #252525;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 35px;
+}
+
+h5 {
+  color:#252525;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+h6 {
+  padding: 10px 0;
+  border-bottom: 2px solid #252525;
+  color:#444745;
+  font-size: 30px;
+}
+
+p { color:#8f928f; }
+
+.wrapper { 
+  max-width: 1360px;
+  width: 92.64%;
+  margin: 0 auto;
+}
+
+input,
+textarea { outline: none; }
+
+
+/* Global styling end-here */
+
+/*********************** common classes styling  start  Here****************/
+
+.icon-style { display: block; }
+
+.icon-style::before {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family:FontAwesome;
+  align-items: center;
+  color:#b78d65;
+  font-size:16px;
+  float: left;
+  text-indent: 0;
+  transition: all .5s ease-in-out;
+}
+
+.read-more-btn {
+  padding: 20px 50px;
+  display: inline-block;
+  background-color: #b78d65;
+  color: #fff;
+  transition: all .5s ease-in-out;
+}
+
+.section-small-heading {
+  margin-bottom: 20px;
+  display: block;
+  color: #b78d65;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 3px;  
+}
+
+.icon-figure {
+  width:28%;
+  margin: 0 auto; 
+}
+
+figure img {
+  object-fit: cover;
+}
+/***********************common classes styling end here********************/
+
+/* active classes start here */
+.navbar-list.active  a{ color: #b78d65; }
+
+.project-name-list.active a {
+  background-color: #b78d65;
+  color: #fff;
+}
+/* active-classes end here */
+
+
+/* Hamburger menu start here */
+.hamburger {
+  cursor: pointer;
+  display:none;
+}
+
+.line {
+  width: 30px;
+  height: 1px;
+  display: block;
+  text-indent: -9999px;
+  position: relative;
+  background-color: #2d2e2d;
+}
+
+.line::after,
+.line::before {
+  width: 30px;
+  height: 1px;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  display: block;
+  background-color: #2d2e2d;
+}
+
+.line::before { bottom:-10px; }
+/* hamburger menu ends here */
+
+/* ==========================================================================
+   1. HEADER START HERE
+   ========================================================================== */
+.header-top .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row-reverse; 
+}
+
+.phone::before { 
+  content: "\f095";
+  width: auto;
+  margin-right: 10px;
+}
+
+.email::before {
+  content: "\f2b6";
+  width: auto;
+  margin-right: 10px;
+}
+
+.header-top {
+  background-color:#252525;
+  padding: 13px 0;
+}
+
+.terms-social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  margin-left: 20px;
+  display: flex; 
+}
+
+.terms-social-links > a:first-child { margin-right: 18px; }
+.facebook::before { content: "\f39e"; }
+.twitter::before { content: "\f099"; }
+.linkdin::before { content: "\f0e1"; }
+.instagram::before { content:"\f16d"; }
+.social-link-list:not(:last-child) { margin-right: 5px; }
+.contact a:last-child{ margin-right: 20px; }
+.terms-social-links a { color: #5c5c57; }
+
+li.social-link-list a {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #5c5c57;
+  display:block;
+  text-indent: -9999px;
+}
+
+.contact a { 
+  color: #5c5c57;
+  font-size: 15px;
+}
+
+.header-bottom .wrapper { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo a {
+  display: flex;
+  align-items: center; 
+}
+.navigation-bar { display: flex; }
+.navbar { display: flex; }
+
+.logo-name {
+  margin-left: 15px;
+  color: #b78d65;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.navbar-list:nth-child(4) {
+  position: relative;
+}
+
+.sub-menus { 
+  display: none;
+  position: absolute; 
+}
+
+.appoinment-btn a {
+  padding: 10px 25px;
+  background-color: #b78d65;
+  color: #fff;
+}
+
+.navbar-list a { color: #303232; }
+.navbar-list:not(:last-child) { margin-right: 28px; }
+.header-bottom { padding: 11px 0; }
+.appoinment-btn { margin-left:28px; }
+
+.more-menu::after {
+  margin-left: 5px;
+  font-family: FontAwesome;
+  content: "\f107";
+  font-size: 13px;
+}
+/* ==========================================================================
+   1. HEADER END HERE
+   ========================================================================== */
+/* ==========================================================================
+   2. MAIN STYLING START HERE
+========================================================================== */
+/* ==========================================================================
+   2.1. BANNER START  HERE
+   ========================================================================== */
+.banner-slider .wrapper { width: 82.5%; }
+.banner-slider { position: relative; }
+.slider-img-list:not(:first-child) { display: none; }
+
+.slider-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index:-1;
+}
+
+.banner-content {
+  width: 80%;
+  padding: 210px 0 212px;
+}
+
+.banner-content p { 
+  margin: 25px 0;
+  color: #fff;
+  font-size: 18px;
+  line-height:30px;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 55%;
+  right: 2%;
+  display: block;
+  text-indent: -9999px;
+}
+
+.arrow::before{
+  content: "\f062";
+  font-size: 23px;
+  background-color: #b78d65;
+  color: #fff;
+}
+
+/* ==========================================================================
+   2.1 BANNER END HERE
+   ========================================================================== */
+
+/* ==========================================================================
+   2.2  INTERRIOR DESIGN STYLIN START HERE
+========================================================================== */
+.interior-design-details .wrapper { width: 82%; }
+.interior-design-details { padding-top:150px }
+
+.design-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.design-detail-list {
+  position: relative;
+  padding: 83px 50px 48px;
+  margin-bottom: 70px;
+  flex-basis: 32%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.design-detail-list:not(:nth-child(3n)) {
+  margin-right: 2%;
+}
+
+.design-detail-list p {
+  margin-top: 30px;
+  line-height: 25px;
+}
+
+.design-detail-list figure {
+  width: 100px;
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+}
+/* ==========================================================================
+   2.2 INTERIOR DESIGN STYLING END HERE
+========================================================================== */
+/* ==========================================================================
+   2.3 ABOUT US SECTION STYLING START HERE
+========================================================================== */
+.about-us { padding: 40px 0 95px; }
+.about-us .wrapper {
+  width: 82%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shuffle-images-left {
+  max-height:453px;
+  margin: 54px 11.7% 0;
+  border: 5px solid #b78d65;
+  flex-basis:29.2%;
+}
+
+.shuffle-images-left figure { width: 28.7%; }
+.shuffle-first-img {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+}
+
+.shuffle-second-img {
+  position: absolute;
+  top: 19%;
+  left: 19%;
+}
+
+.about-us-content {
+  flex-basis: 48%;
+}
+
+.about-us-content h3 { line-height: 47px; }
+
+.para-top,
+.para-bottom {
+  margin: 27px 0;
+  line-height: 25px;
+}
+
+.working-exp {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.exp-no {
+  padding: 15px 37px;
+  border: 5px solid #b78d65;
+  font-size: 65px;
+}
+
+.exp-txt {
+  width: 10%;
+  margin-left: 25px;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+}
+
+/* ==========================================================================
+   2.3 ABOUT US SECTION STYLING END HERE
+========================================================================== */
+/* ==========================================================================
+   2.4 OUR SERVICES STYLING START HERE
+========================================================================== */
+.our-services { padding-bottom: 98px; }
+.our-services .wrapper { width:82%; }
+
+.our-services .section-small-heading,
+.our-services h3 { 
+  width: 63%;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+.services {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-list {
+  padding: 41px 4.9%;
+  margin-bottom: 25px;
+  flex-basis: 31.8%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.services-list:not(:nth-child(3n)) { margin-right: 2.3%;}
+.services-list h4 { margin-top: 30px; }
+
+.services-list p {
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+.plus-btn {
+  display: inline-block;
+  padding: 7px 14px;
+  color: #b78d65;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+}
+/* ==========================================================================
+   2.4 OUR SERVICES STYLING END HERE
+========================================================================== */
+/* ==========================================================================
+   2.5 CHOOSE US SECTION STYLING START HERE
+========================================================================== */
+.choose-us { padding-bottom: 100px; }
+.choose-us-content { flex-basis:50.8%; }
+.choose-detail-list { display: flex; }
+.detail-heading-paragraph { flex-basis: 77%;}
+.choose-details h5 { margin: 25px 0;}
+
+.choose-us .wrapper { 
+  width: 82%; 
+  display: flex;
+  position: relative;
+}
+
+.shuffle-images-right {
+  max-height:453px;
+  margin: 54px 8.7% 0;
+  border: 5px solid #b78d65;
+  flex-basis:31.2%;
+}
+
+.shuffle-images-right .shuffle-first-img {
+  position: absolute;
+  bottom: 23%;
+  left: 52%;
+}
+
+.shuffle-images-right figure {
+  width: 28.7%;
+}
+
+.shuffle-images-right  .shuffle-second-img {
+  position: absolute;
+  top: 17%;
+  left: 71%;
+}
+
+.choose-us-content > p {
+  margin-top: 32px;
+  line-height: 25px;
+}
+
+.choose-details figure {
+  flex-basis: 12%;
+  align-self: center;
+  margin: 0 25px 0 0;
+}
+
+/* ==========================================================================
+   2.5 CHOOSE US SECTION STYLING END HERE
+========================================================================== */
+
+
+ /* ==========================================================================
+   2.6  OUR PROJECTS SECTION START HERE
+========================================================================== */
+.our-projects { padding-bottom: 94px; }
+.our-projects .wrapper { width: 82%;}
+
+.our-projects h3 { 
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.project-info {
+  margin-top: 60px;
+  display: flex;
+}
+
+.section-small-heading { text-align: center; }
+.our-projects h3 { text-align: center;}
+.projects-description { display: flex; }
+.project-description-list:not(.active) { display: none; }
+.project-description-list { display: flex; }
+.project-names { 
+  margin-right: 27px;
+  flex-basis: 70%; 
+}
+
+.project-description-list figure {
+  width: 100%;
+  margin-right: 3%;
+}
+
+.project-name-list:not(:last-child) { margin-bottom: 22px;}
+
+.project-name-list a {
+  padding:30px 20px;
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 900;
+  transition: all .5s ease-in-out;
+}
+
+.project-content { flex-basis: 100%; }
+
+.project-content p {
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.project-point-list {
+  margin: 20px 0 20px 30px;
+  position: relative;
+}
+
+.project-point-list::before{
+  display: block;
+  content: "\f00c";
+  color: #b78d65;
+  position: absolute;
+  right: 9%;
+}
+/* ==========================================================================
+   2.6  OUR PROJECTS SECTION END HERE
+========================================================================== */ 
+/* ==========================================================================
+   2.7 TEAM MEMEBER SECTION STYLING START HERE
+========================================================================== */ 
+.team-members .wrapper { width: 82%; }
+.team-members h3 { text-align:center; }
+.profile-content h5 { margin-bottom: 20px; }
+.team-members-profiles {
+   display: flex;
+   flex-wrap: wrap; 
+  }
+
+.profile-content { 
+  padding: 30px 40px;  
+  position: relative;
+  text-align: center;
+  background-color:#f8f8f8;
+ }
+
+.profile-socail-links {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link-list { margin-right: 10px; }
+.designation { color: #b78d65; }
+
+.link-list a {
+  display: block;
+  text-indent: -9999px;
+  width: 38px;
+  height: 38px;
+  background-color: #f8f8f8;
+  transition: all .5s ease-in-out;
+}
+
+.members-profile-list:not(:nth-child(4n)) { margin-right: 2.7%;}
+.team-members-profiles { position: relative; }
+
+.members-profile-list::before {
+  content: "";
+  width: 273px;
+  height: 100px;
+  position: absolute;
+  display:none;
+  bottom: 0;
+  background-color: #b78d65;
+  transform: translateX(-9px);
+}
+
+.members-profile-list { 
+  cursor: pointer;
+  flex-basis: 22.97%; 
+}
+
+/* ==========================================================================
+   2.7  TEAM MEMBER SECTION STYLING END HERE
+========================================================================== */ 
+/* ==========================================================================
+   2.8 APPOINTMENT SECTION START HERE
+========================================================================== */ 
+.appoinment .wrapper {
+  width: 82%;
+  display: flex;
+}
+
+.appoinment-content {
+  flex-basis: 47.8%;
+  margin-right: 4.5%;
+}
+
+.appoinment { padding: 93px 0 100px; }
+.appoinment .section-small-heading { text-align:left; }
+.appointment-book-form { flex-basis:48%; }
+.fifty-percent:nth-child(2n+1) { margin-right: 3.5%; }
+.mail-us { position: relative; }
+textarea { width: 100%; }
+
+.appoinment-content p {
+  margin: 40px 0 20px;
+  line-height: 25px;
+}
+
+.call-mail {
+  position: absolute;
+  display: block;
+  left: 16%;
+  top: 0;
+  color: #8f928f;
+}
+
+.call-us {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.call-us .phone,
+.mail-us .email {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+.call-us .phone::before,
+.mail-us .email::before{
+  font-size: 35px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  margin-right: 30px;
+}
+
+.fifty-percent {
+  display: inline-block;
+  width: 47.8%;
+}
+
+.fifty-percent input,
+select {
+  padding: 18px 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.book-appointment-btn input {
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+  border: none;
+  background-color: #b78d65;
+  color: #fff;
+  font-size: 15px;
+}
+
+.fifty-percent,
+.text-area { margin-bottom: 20px; }
+/* ==========================================================================
+   2.8 APPOINTMENT SECTION END HERE
+========================================================================== */
+
+/* ==========================================================================
+   2.9 TESTIMONIAL SECTION START HERE
+========================================================================== */
+.testimonial { padding-bottom: 100px ; }
+.testimonial .section-small-heading { text-align: center; }
+.testimonial h3 { text-align: center; }
+.testimonial .wrapper { width: 48%; }
+.client-list h5 { margin: 20px 0;}
+.profession { color: #b78d65; }
+.client-list:not(.active) { display: none; }
+.client-list { text-align: center; }
+
+.client-list figure {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.clinet-discription {
+  font-size: 18px;
+  line-height: 25px;
+}
+/* ==========================================================================
+   2.9 TESTIMONIAL SECTION END HERE
+========================================================================== */
+
+/* ==========================================================================
+   4. FOOTER START HERE
+========================================================================== */ 
+footer { background-color: #252525; }
+.footer-top { padding:90px 0 57px; }
+.address { flex-basis: 26%; }
+.services-link-list,
+.quick-link-list   { position: relative; }
+
+address {
+  position: relative;
+  margin-left: 28px;
+}
+
+address::before {
+  content: "\f3c5";
+  position: absolute;
+  right: 61%;
+}
+
+.services-link-list:not(:last-child),
+.quick-link-list:not(:last-child) { margin-bottom: 8px; }
+
+.service-links { flex-basis: 22%; }
+.services-link-list .icon-style::before,
+.quick-link-list .icon-style::before {
+  content: "\f105";
+  position: absolute;
+  right: 60%;
+  font-size: 12px;
+}
+
+.footer-top .wrapper {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-top .wrapper div:not(:last-child) { margin-right: 5%; }
+
+footer h6 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.address .email { margin: 10px 0; }
+.address .social-links { margin: 10px 0 0; }
+.youtube::before { content: "\f167";}
+.address a,
+address { color:#8f928f;}
+
+footer .services {
+  display: block;
+  margin: 0;
+}
+
+.services-link-list a ,
+.quick-link-list a,
+.form-paragrapgh { color: #8f928f; }
+
+.footer-form {
+  padding: 10px;
+  border: 1px solid #8f928f;
+  display: flex;
+  margin-top: 15px;
+}
+
+.enter-mail input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #252525;
+  font-size: 15px;
+}
+
+.sign-up input {
+  padding: 10px;
+  background-color: #b78d65;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+}
+
+.services,
+.quick-links { flex-basis: 21%; }
+.news-letter { width: 21.5%; }
+.enter-mail { width: 71%;}
+.footer-bottom { padding: 30px 0; }
+.footer-bottom .wrapper { width: 82%; }
+/* ==========================================================================
+   4. FOOTER END HERE
+========================================================================== */ 
+ /* ==========================================================================
+   5. MEDIA QUERY START HERE
+========================================================================== */ 
+
+/*********hover media query start**********/
+@media screen and (min-width:995px) {
+  .contact a:hover,
+  .terms-social-links a:hover { color: #fff; }
+  .social-link-list a:hover { background-color: #b78d65;}
+  .social-link-list a:hover::before { color: #252525; }
+
+  .navbar-list a:hover { color: #b78d65; }
+
+  .more-menu:hover .sub-menus {
+    width: 100%;
+    min-width: 120px;
+    padding: 0 10px;
+    border-radius: 10px;
+    display:block;
+    position:absolute;
+    top: 25px;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    transition: all .5s ease-in-out;
+    object-fit: cover;
+  }
+
+  .appoinment-btn a:hover {
+    background-color: #fff;
+    color: #b78d65;
+  }
+
+  .read-more-btn:hover,
+  .arrow:hover::before {
+    background-color: #fff;
+    color: #b78d65;
+  }
+
+  .services-list {
+    background-blend-mode: overlay;
+    transition:all .3s ease-in-out;
+  }
+
+  .services-list p,
+  .services-list h3 { transition: all .5s ease-in-out; }
+  .architecture:hover { background: rgba(0,0,0,.5) url("../img/service-1.jpg");}
+  .animation:hover { background: rgba(0,0,0,.5) url("../img/service-2.jpg") }
+  .house-plan:hover { background: rgba(0,0,0,.5) url("../img/service-3.jpg") }
+  .interior-design:hover { background: rgba(0,0,0,.5) url("../img/service-4.jpg") }
+  .renovation:hover { background: rgba(0,0,0,.5) url("../img/service-5.jpg") }
+  .construction:hover { background: rgba(0,0,0,.5) url("../img/service-6.jpg") }
+
+  .services-list:hover p,
+  .services-list:hover h5 { color: #fff; }
+
+  .project-name-list a:hover {
+    background-color: #b78d65;
+    color: #fff;
+  }
+
+  .link-list a:hover { background-color: #b78d65; }
+
+  .link-list a:hover::before { color: #fff; }
+  .phone:hover,
+  .email:hover { color: #b78d65;}
+
+  .sign-up input:hover {
+    background-color: #fff;
+    color: #b78d65;
+  }
+
+  .members-profile-list:hover::before {
+    display: block;
+    cursor: pointer; 
+  }
+
+  .book-appointment-btn input:hover{
+    background-color: #fff;
+    color: #b78d65;
+    border: 1px solid #b78d65;
+  }
+
+  .services-link-list a:hover,
+  .quick-link-list a:hover { color: #fff; }
+}
+/*********hover media query End**********/
+/************1280px media query start here*************/
+@media screen and (max-width:1280px) {
+  .about-us .wrapper,
+  .team-members .wrapper ,
+  .appoinment .wrapper ,
+  .banner-slider .wrapper ,
+  .our-projects .wrapper ,
+  .interior-design-details .wrapper,
+  .choose-us .wrapper { width: 90%; }
+  h2 { font-size: 60px; }
+  h3 { font-size: 32px; }
+  h4 { font-size: 28px; }
+  .enter-mail input { padding: 10px 0; }
+  .call-mail { left: 20%; }
+  .enter-mail { width: 65%;}
+  .our-projects h3 { width: 60%; }
+  .fifty-percent { width: 47%; }
+  .shuffle-images-left { margin: 67px 6% 0;  }
+  .shuffle-images-left figure ,
+  .shuffle-images-right figure { width: 26%; }
+ 
+  .team-members h3 { 
+    width: 60%; 
+    margin: 0 auto;
+  }
+
+  .design-detail-list { padding: 83px 3% 48px; }
+}
+/****************1280 media Query end here************/
+
+/* ****************1024px media query start here************/
+@media screen and (max-width:1024px) {
+  .design-detail-list { padding: 83px 2% 48px; }
+  .project-name-list a { padding: 30px 14px; }
+  h2 { font-size: 50px; }
+  h3 { font-size: 28px; }
+  h4 { font-size: 26px; }
+}
+/* ****************1024px media query end here**************/
+
+/****************995px media query start here**************/
+@media screen and (max-width:995px) {
+  nav { display: none; }
+  h2 { font-size: 40px; }
+  .interior-design-details { padding-top:150px ; }
+  .navigation-bar { flex-direction: row-reverse; }
+  .appoinment-btn { margin:0 28px 0 0; }
+
+  .hamburger:hover ~ nav { 
+    display: block;
+    position: absolute; 
+    top: 20%;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  .hamburger { 
+    display: block; 
+    height: 30px;
+  }
+
+  .navbar { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  .navbar-list {
+    margin: 20px 30px;
+    transition: all .5s ease-in-out;
+  }
+
+  .slider-img img { max-height: 500px; }
+  .banner-content { padding: 100px 0; }
+
+  .about-us .wrapper { flex-direction: column; }
+
+  .shuffle-first-img {
+    left: 10%;
+    bottom:58%;
+  }
+  
+  .shuffle-second-img {
+    top: 9%;
+    left: 40%;
+  }
+
+  .shuffle-images-left { 
+    width: 50%;
+    margin: 70px auto 90px;
+    padding:210px 0;
+  }
+
+  .shuffle-images-left figure {
+    display: block;
+    width: 45%;
+  }
+
+  .services-list { flex-basis: 46.8%; }
+  .services-list:not(:nth-child(3n)) { margin-right: 0; }
+  .services-list:not(:nth-child(2n)) { margin-right: 6%; }
+  .choose-us .wrapper { flex-direction: column; }
+
+  .shuffle-images-right {
+    width: 50%;
+    margin: 100px auto 70px;
+    padding:210px 0;
+  }
+
+  .shuffle-images-right .shuffle-first-img {
+    left: 17%;
+    bottom:12%;
+  }
+
+  .shuffle-images-right .shuffle-second-img {
+    top: 55%;
+    left:40%;
+  }
+
+  .shuffle-images-right figure {
+    display: block;
+    width: 45%;
+  }
+
+  .choose-details figure { flex-basis:62px; }
+  .project-info { flex-direction: column; }
+  .project-names { margin: 0 0 30px; }
+  .members-profile-list:hover::before { display: none; } 
+  .team-members-profiles { justify-content: space-around; }
+  .members-profile-list:not(:nth-child(4n)) { margin-right: 0; }
+  .members-profile-list:not(:nth-child(2n)) { margin-right: 3%; }
+
+  .members-profile-list {
+    flex-basis: 32%; 
+    margin-bottom:35px;
+  }
+
+  .call-us .phone::before, .mail-us .email::before { margin-right: 20px; }
+
+  .footer-top .wrapper {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .address .email {position: relative;}
+  .address .phone {position: relative;}
+  .address .social-links { 
+    justify-content: start;
+    transform: translateX(-33px);
+  }
+
+  .address .email::before {
+    position: absolute;
+    top: 0;
+    left: -6.5%;
+  }
+
+  .address .phone::before {
+    position: absolute;
+    left:-6%;
+  }
+
+  address { margin-left: 0; }
+  
+  footer h6 {  margin: 20px 0; }
+  .social-link-list:not(:last-child) { margin-right: 15px; }
+  .footer-top .wrapper div:not(:last-child) { margin-right: 0; }
+  
+  address.icon-style::before { 
+    display:inline-block;
+    right: 6%; 
+  }
+
+  .news-letter {
+    width: 60%;
+  }
+
+  .footer-form { width: 65%; }
+  .footer-top .wrapper { width: 80%; }
+  .sign-up input { padding: 10px 20px;}
+  .footer-bottom p { text-align: center; }
+
+  .design-details {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .quick-link-list .icon-style::before ,
+  .services-link-list .icon-style::before {
+    right: 55%;
+  }
+}
+/****************995px media query end here**************/
+/* **********768px media query started here************** */
+@media screen and (max-width:768px) {
+  .header-top .wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .testimonial .wrapper {
+    width: 62%;
+  }
+  
+  h2 { font-size:28px; }
+  .banner-content p { font-size: 16px; }
+  .contact { margin-bottom:20px; }
+  .read-more-btn { padding: 15px 30px; }
+
+  .appoinment .wrapper {
+    flex-direction: column;
+  }
+
+  .call-mail { left: 12%; }
+  .appoinment-content { margin: 0 0 30px; }
+
+  .fifty-percent { width: 47.6%; }
+  .client-list figure {
+    width: 30%;
+    margin: 15px auto;
+  }
+
+  .services-list {
+    flex-basis: 75%;
+    margin: 0 auto 25px;
+  }
+
+  .call-us .phone::before, .mail-us .email::before { font-size: 23px; }
+  .call-us .phone, .mail-us .email { font-size: 17px; }
+  .services-list:not(:nth-child(3n)),
+  .services-list:not(:nth-child(2n)) { margin-right:auto; }
+
+}
+/* **********768px media query End here************** */
+
+
+ /* ==========================================================================
+   5. MEDIA QUERY END HERE
+========================================================================== */ 
